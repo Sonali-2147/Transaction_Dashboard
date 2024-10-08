@@ -44,70 +44,26 @@ This project is designed to implement a backend API with Node.js, Express, Mongo
    - Create an API that fetches data from the third-party API using `axios` and seeds the MongoDB database.
      - **API Endpoint:** `GET /api/init`
      - **Task:** Fetch JSON from the URL and insert the data into MongoDB.
-     ```javascript
-     const axios = require('axios');
-     const Product = require('./models/Product'); // Product Schema
-     
-     const initDB = async (req, res) => {
-       const response = await axios.get('https://s3.amazonaws.com/roxiler.com/product_transaction.json');
-       await Product.insertMany(response.data);
-       res.json({ message: 'Database initialized successfully' });
-     };
-     ```
+    
 
 #### b. **List Transactions API**
    - Implement an API to list transactions based on search and pagination.
      - **API Endpoint:** `GET /api/transactions`
      - **Search Parameters:** product title/description/price.
      - **Pagination:** Default page = 1, per page = 10.
-     ```javascript
-     const listTransactions = async (req, res) => {
-       const { page = 1, perPage = 10, search = '' } = req.query;
-       const query = {
-         $or: [
-           { title: { $regex: search, $options: 'i' } },
-           { description: { $regex: search, $options: 'i' } },
-           { price: { $regex: search, $options: 'i' } }
-         ]
-       };
-       const transactions = await Product.find(query)
-         .skip((page - 1) * perPage)
-         .limit(parseInt(perPage));
-       res.json(transactions);
-     };
-     ```
+     
 
 #### c. **Statistics API**
    - Implement an API to calculate the total sale amount, sold items, and unsold items for a selected month.
      - **API Endpoint:** `GET /api/statistics`
      - **Input:** Month (January to December).
-     ```javascript
-     const getStatistics = async (req, res) => {
-       const { month } = req.query;
-       const transactions = await Product.find({ dateOfSale: { $regex: month, $options: 'i' } });
-       const totalSale = transactions.reduce((sum, item) => sum + item.price, 0);
-       const soldItems = transactions.filter(item => item.sold).length;
-       const unsoldItems = transactions.filter(item => !item.sold).length;
-       res.json({ totalSale, soldItems, unsoldItems });
-     };
-     ```
+     
 
 #### d. **Bar Chart API**
    - Create an API to return price ranges and the number of items in each range.
      - **API Endpoint:** `GET /api/bar-chart`
      - **Response:** Items in each price range.
-     ```javascript
-     const getPriceRangeData = async (req, res) => {
-       const { month } = req.query;
-       const transactions = await Product.find({ dateOfSale: { $regex: month, $options: 'i' } });
-       const priceRanges = { '0-100': 0, '101-200': 0, ... };
-       transactions.forEach(item => {
-         if (item.price <= 100) priceRanges['0-100']++;
-         // Continue for other ranges
-       });
-       res.json(priceRanges);
-     };
-     ```
+     
 
 #### e. **Pie Chart API**
    - Create an API to get categories and the number of items sold in each.
