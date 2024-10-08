@@ -42,14 +42,18 @@ This project is designed to implement a backend API with Node.js, Express, Mongo
 1. Backend Dependencies:
    ```
    cd backend
-   npm i or npm install 
+   npm i or npm install
+
+   or open in integrated Terminal
    ```
    
 2. Frontend dependencies:
    ```
    cd frontend
    cd vite-project
-   npm i or npm install 
+   npm i or npm install
+
+   or open in integrated Terminal
    ```
 
 ## Usage
