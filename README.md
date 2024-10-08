@@ -68,17 +68,7 @@ This project is designed to implement a backend API with Node.js, Express, Mongo
 #### e. **Pie Chart API**
    - Create an API to get categories and the number of items sold in each.
      - **API Endpoint:** `GET /api/pie-chart`
-     ```javascript
-     const getCategoryData = async (req, res) => {
-       const { month } = req.query;
-       const transactions = await Product.find({ dateOfSale: { $regex: month, $options: 'i' } });
-       const categories = {};
-       transactions.forEach(item => {
-         categories[item.category] = (categories[item.category] || 0) + 1;
-       });
-       res.json(categories);
-     };
-     ```
+    
 
 ### 3. **Frontend Development**
 
