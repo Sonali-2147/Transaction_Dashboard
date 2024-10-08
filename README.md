@@ -57,6 +57,7 @@ This project is designed to implement a backend API with Node.js, Express, Mongo
 1. Backend Deploy:
    ```
    cd backend
+   npm install express
    node server.js
    ```
 
@@ -97,5 +98,5 @@ Contributions are welcome! For major changes, please open an issue first to disc
 #
 ### Contact
 
-For questions or support, please contact [lambeharsh21@gmail.com](mailto:lambeharsh21@gmail.com).
+For questions or support, please contact [kadamsonali2147@gmail.com](mailto:kadamsonali2147@gmail.com).
 
