@@ -44,7 +44,7 @@ This project is designed to implement a backend API with Node.js, Express, Mongo
    cd backend
    npm i or npm install
 
-   or open in integrated Terminal
+  
    ```
    
 2. Frontend dependencies:
@@ -52,8 +52,7 @@ This project is designed to implement a backend API with Node.js, Express, Mongo
    cd frontend
    cd vite-project
    npm i or npm install
-
-   or open in integrated Terminal
+   
    ```
 
 ## Usage
@@ -61,6 +60,7 @@ This project is designed to implement a backend API with Node.js, Express, Mongo
 1. Backend Deploy:
    ```
    cd backend
+   or open in integrated Terminal
    npm install express
    node server.js
    ```
@@ -69,6 +69,7 @@ This project is designed to implement a backend API with Node.js, Express, Mongo
    ```
    cd frontend
    cd vite-project
+   or open in integrated Terminal
    npm run dev
 
    ```
