@@ -82,13 +82,13 @@ This project is designed to implement a backend API with Node.js, Express, Mongo
 ![Screenshot 1](Transaction_Dashboard_images/Pie_Chart.png) 
 
 **Bar Chart Displaying Price range and sold items of  Selected month**
-![Screenshot 2](images/bc.jpeg)
+![Screenshot 2](Transaction_Dashboard_images/Bar_Chart.png)
 
 **Table Displaying Statistics of Selected month**
-![Screenshot 3](images/stat.jpeg)
+![Screenshot 3](Transaction_Dashboard_images/Statistics.png)
 
 **Table Displaying Transactions of  Selected month**
-![Screenshot 3](images/tt.jpeg)
+![Screenshot 3](Transaction_Dashboard_images/Transaction_table.png)
 
 
 ## Contributing
