@@ -1,5 +1,6 @@
 # Transaction_Dashboard
-This project is designed to implement a backend API with Node.js, Express, MongoDB (MERN stack), and a frontend using React, to interact with the provided APIs for managing product transactions and displaying various visualizations.
+This project is designed to implement a backend API with Node.js, Express, MongoDB (MERN stack), and a frontend using React, to interact with the provided APIs for managing product transactions and displaying various visualizations monthly using Amazon API.
+
 
 Here is a step-by-step README file for the MERN Stack coding challenge based on the task described:
 
